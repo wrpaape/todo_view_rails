@@ -1,0 +1,8 @@
+Todo.create(body: "relearn html")
+Todo.create(body: "first completed todo", completed: true)
+Todo.create(body: "make sandwich")
+Todo.create(body: "eat sandwich")
+Todo.create(body: "build chat app", completed: true)
+Todo.create(body: "build todo app")
+Todo.create(body: "get some sleep")
+Todo.create(body: "whine", completed: true)

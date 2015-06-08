@@ -1,0 +1,7 @@
+<ol>
+  <% todos.each do |todo| %>
+   <li>
+     <%= render partial: 'todo', locals: { todo: todo } %>
+   </li>
+  <% end %>
+</ol>
