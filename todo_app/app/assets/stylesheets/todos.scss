@@ -50,12 +50,32 @@ $trynow-text-grey: rgb(103,103,103);
   background: black;
   height: 50px;
   padding-top: 9px;
-  color: rbg(150,150,150);
+  color: white;
   font-family: sans-serif;
   font-size: 32px;
-  text-shadow: black 1px 1px 1px;
+  text-shadow: grey 1px 1px 1px;
   text-align: center;
 }
+
+
+
+.subtitles{
+  background: black;
+  height: 24px;
+  padding: 13px 100px;
+  color: white;
+  text-align: center;
+  .subtitle{
+    display: inline-block;
+    color: white;
+    font-family: sans-serif;
+    font-size: 24px;
+    text-shadow: grey 1px 1px 1px;
+    text-align: center;
+  }
+}
+
+
 .benefits{
     .benefits-head{
       height: $benefits-height;
