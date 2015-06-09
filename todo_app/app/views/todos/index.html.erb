@@ -1,6 +1,8 @@
-<ol>
+<ol class="list">
   <% todos.each do |todo| %>
    <li>
+     <%= link_to "view", "todos/#{todo.id}" %>
+     <%= button_to "delete", { action: "destroy", id: todo.id }, method: :delete, data: { confirm: "Are you sure?" } %>
      <%= render partial: 'todo', locals: { todo: todo } %>
    </li>
   <% end %>

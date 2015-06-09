@@ -69,20 +69,6 @@ class TodosController < ApplicationController
     end
   end
 
-  # def show
-  #   found_student = Student.find(params[:id])
-  #   respond_to do |format|
-  #     format.html do
-  #       render 'show.html.erb', locals: { student: found_student }
-  #     end
-  #     format.json do
-  #       render json: found_student
-  #     end
-  #   end
-  # end
-
-
-
   def update
     begin
       todo = Todo.find(params[:id])
@@ -100,15 +86,19 @@ class TodosController < ApplicationController
   def destroy
     begin
       todo = Todo.find(params[:id])
+      response = todo
       todo.destroy
-      render_json("deleted", 200)
+      response_code = "200"
+      respond_to do |format|
+        format.html { render_html("destroy.html.erb", response, response_code) }
+        format.json { render_json(response, response_code) }
+      end
     rescue ActiveRecord::RecordNotFound => error
       render_json(error.message, 404)
     rescue StandardError => error
       render_json(error.message, 422)
     end
   end
-
 
   def not_found
     response = []

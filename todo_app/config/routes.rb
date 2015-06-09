@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   post 'todos', to: 'todos#create'
 
-
+  root to: 'todos#index'
 
 
   # When a GET request comes to the URL /use
