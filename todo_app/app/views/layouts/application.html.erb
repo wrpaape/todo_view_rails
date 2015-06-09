@@ -7,14 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
+  <header class="header">
     <h1 class="title">Todo List</h1>
     <div class="subtitles"><!--
     --><div class="subtitle1">Finished</div><!--
     --><div class="subtitle2">Not Finished</div><!--
   --></div>
 
-    <a href="/todos" class="link">All Todos</a>
+    <a href="/todos" class="subtitle">All Todos</a>
     <!-- <a href='/students/highest_gpa'>Highest GPA</a> -->
   </header>
   <%= yield %>

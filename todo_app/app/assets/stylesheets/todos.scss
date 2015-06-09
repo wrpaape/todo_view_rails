@@ -1,51 +1,9 @@
-//variables
-//size values
-$breakpoint2: 479px;
-$breakpoint3: 768px;
-$breakpoint4: 979px;
-$simple-height1: 200px;
-$simple-height2: 400px;
-$simple-pad1: 60px;
-$simple-pad2: 145px;
-$benefits-height: 220px;
-$benefits-margin: 34px;
-$trynow-pad: 25px;
-
-//color values
-$links-text-grey1: rgb(68,76,84);
-$links-text-grey2: rgb(117,117,117);
-$personal-bg-green: rgb(81,146,81);
-$benefits-text-grey: rgb(71,85,91);
-$benefits-bg-grey: rgb(247,247,247);
-$benefits-border-grey: rgb(219,219,219);
-$smbus-bg-blue: rgb(44,73,133);
-$options-text-grey: rgb(67,83,89);
-$trynow-text-grey: rgb(103,103,103);
-
-//mixins
-@mixin links-text-style{
-  display: inline-block;
-  font-family: sans-serif;
-  font-size: 16px;
-  text-align: center;
-}
-@mixin benefits-text1-style{
-  font-family: sans-serif;
-  font-size: 16px;
-}
-@mixin benefits-text2-style{
-  font-family: sans-serif;
-  font-size: 90px;
-  font-weight: 200;
-}
-@mixin benefits-text3-style{
-  font-family: sans-serif;
-  font-size: 19px;
-  color: rgba(255,255,255,0.3);
-  font-weight: 500;
-}
-
 //selectors
+.header{
+  background: black;
+  margin: 0;
+}
+
 .title{
   background: black;
   height: 50px;
@@ -58,8 +16,6 @@ $trynow-text-grey: rgb(103,103,103);
   margin: 0;
 }
 
-
-
 .subtitles{
   background: black;
   height: 24px;
@@ -69,8 +25,6 @@ $trynow-text-grey: rgb(103,103,103);
   font-family: sans-serif;
   font-size: 24px;
   text-shadow: grey 1px 1px 1px;
-
-
   .subtitle1{
     display: inline-block;
     width: 50%;
@@ -81,133 +35,14 @@ $trynow-text-grey: rgb(103,103,103);
   }
 }
 
-
-.benefits{
-    .benefits-head{
-      height: $benefits-height;
-      color: white;
-      text-align: center;
-      margin: 0 9px 0;
-      .type{
-        height: 20px;
-        @include benefits-text1-style;
-        padding-top: 35px;
-      }
-      .fee{
-        height: 50%;
-        @include benefits-text2-style;
-      }
-      .permonth{
-        height: 25%;
-        @include benefits-text3-style;
-        vertical-align: top;
-      }
-      &.personal{
-        background: $personal-bg-green;
-      }
-      &.smbus{
-        background: $smbus-bg-blue;
-      }
-      &.enterprise{
-        background: black;
-      }
-    }
-  .benefits-body{
-    color: $benefits-text-grey;
-    text-align: center;
-    margin: 0 8px $benefits-margin;
-
-    .benefits-list{
-      @include benefits-text1-style;
-      background: $benefits-bg-grey;
-      height: 42px;
-      line-height: 42px;
-      border: solid 1px $benefits-border-grey;
-      border-top: 0px;
-    }
-    .benefits-choose{
-      @include benefits-text1-style;
-      background: $benefits-bg-grey;
-      border: solid 1px $benefits-border-grey;
-      border-top: 0px;
-      height: 60px;
-      padding-top: 24px;
-      div{
-        font-weight: bold;
-        margin: 0 auto;
-        background: white;
-        height: 34px;
-        width: 92px;
-        border: solid 1px $benefits-border-grey;
-        -moz-border-radius: 17px;
-            -webkit-border-radius: 17px;
-            border-radius: 17px;
-        line-height: 34px;
-      }
-    }
-  }
-  &.last{
-    margin-bottom: 78px;
-  }
-}
-.options{
-  padding: 30px 32px 0;
-  box-sizing: border-box;
-  vertical-align: top;
-  .options-title{
-    font-size: 19px;
-  }
-  .options-body{
-    color: $options-text-grey;
-    margin: 24px auto 30px;
-    line-height: 1.5;
-    font-size: 16px;
-  }
-}
-.trynow{
-  padding: $trynow-pad 30px;
+.subtitle{
+  margin: 0;
   background: black;
-  line-height: 1.5;
-  text-align: center;
-  .trynow-link{
-    color: white;
-    text-decoration: underline;
-  }
-  .trynow-text{
-    color: $trynow-text-grey;
-  }
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-shadow: grey 1px 1px 1px;
 }
-//media queries
-//479px to 767px
-@media (min-width: $breakpoint2){
-  .links-parent{
-    width: 400px;
-    margin-left: 0;
-  }
-  .simple{
-    height: $simple-height2 - $simple-pad2;
-    padding-top: $simple-pad2;
-    font-size: 46px;
-  }
-}
-//768px to 978px
-@media (min-width: $breakpoint3){
-  .benefits{
-    display: inline-block;
-    width: 33.3%;
-    &.last{
-      margin-bottom: 10px;
-    }
-  }
-  .options{
-    display: inline-block;
-    width: 50%;
-  }
-}
-//979px and larger
-@media (min-width: $breakpoint4){
-  .content{
-    width: $breakpoint4;
-    margin: 0 auto;
-  }
-}
+
+
+
